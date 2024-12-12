@@ -15,7 +15,7 @@ public class ScriptVector : MonoBehaviour
         Vector2 a = aTf.position;
         Vector2 b = bTf.position;
 
-        // Draw the direction a to b
+        // Draw the direction a to b (GOOD SOLUTION :D)
         Vector2 direction = (b - a);
         Vector2 direction_noamlized = direction / direction.magnitude;
         Gizmos.DrawLine(a, a + direction_noamlized);
