@@ -15,7 +15,10 @@ public class ScriptVector : MonoBehaviour
         Vector2 a = aTf.position;
         Vector2 b = bTf.position;
 
-        Gizmos.DrawLine(a, b);
+        // Draw the direction a to b
+        Vector2 direction = (b - a);
+        Vector2 direction_noamlized = direction / direction.magnitude;
+        Gizmos.DrawLine(a, a + direction_noamlized);
 
         abDist = Vector2.Distance(a, b);
 
@@ -25,7 +28,7 @@ public class ScriptVector : MonoBehaviour
 
         //Gizmos.DrawLine(Vector2.zero , ptr/length);
 
-        // Unity Way 
+        // Unity Way to normalize a vector
         Vector2 ptr = transform.position;
         Vector2 dirToPoint = ptr / ptr.magnitude;
         Gizmos.DrawLine (Vector2.zero, dirToPoint);
