@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 1017776466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.915, y: 1.361, z: 0}
+  m_LocalPosition: {x: 1.425, y: 3.445, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 1243050113}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.002, y: 1.006, z: 0}
+  m_LocalPosition: {x: -1.2419999, y: 2.947, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -227,7 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aTf: {fileID: 1243050114}
   bTf: {fileID: 1017776467}
-  abDist: 1.9495933
+  offset: 1.79
+  abDist: 2.7130964
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
