@@ -19,8 +19,10 @@ public class RadialTriggerScript : MonoBehaviour {
 
         if (radius <= distance) {
             triggered = false;
+            Handles.color = Color.red;
         }else {
             triggered = true;
+            Handles.color = Color.green;
         }
 
         Handles.DrawWireDisc(origin, new Vector3(0,0,1), radius);
