@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ public class Asgmt_3_Script : MonoBehaviour {
     // Point realted variabels
     public bool convertToLocalSpace = false;
     public bool convertToWorldSpace = false;
+
+    public Transform copyPoint; 
+
     Vector2 point_pos;
 
     // World Space's Transform
@@ -40,25 +44,44 @@ public class Asgmt_3_Script : MonoBehaviour {
         point_pos = this.transform.position;
 
         // Draw helper lines
-        // World X axis
         DrawMyGizmos();
 
+        TransformCopyPoint(point_pos);
 
-        if (convertToLocalSpace) {
-            this.transform.position = WorldToLocal(point_pos);
-        } else {
-            this.transform.position = LocalToWorld(point_pos);
-        }
     }
 
+
+    private void TransformCopyPoint(Vector2 point_pos) {
+        Vector2 final_positon = new Vector2(0f, 0f);
+        if (convertToLocalSpace) {
+            final_positon = WorldToLocal(point_pos);
+        }
+
+        if (convertToWorldSpace) {
+            final_positon = LocalToWorld(point_pos);
+        }
+
+        copyPoint.transform.position = final_positon;
+    }
 
     private Vector2 WorldToLocal(Vector2 current_pos) {
-        return new Vector2(10f, 10f);
+        float dotX = Vector2.Dot(worldX, current_pos);
+        float dotY = Vector2.Dot(worldY, current_pos);
+        
+        Vector2 deltaX = localX - localOrigin;
+        Vector2 deltaY = localY - localOrigin;
+        Vector2 result = localOrigin + (deltaX * dotX + deltaY * dotY);
+        return result;
     }
 
-
     private Vector2 LocalToWorld(Vector2 current_pos) {
-        return new Vector2(0f, 0f);
+        float dotX = Vector2.Dot(localX, current_pos);
+        float dotY = Vector2.Dot(localX, current_pos);
+
+        Vector2 deltaX = worldX - worldOrigin;
+        Vector2 deltaY = worldY - worldOrigin;
+        Vector2 result = worldOrigin + (deltaX * dotX + deltaY * dotY);
+        return result;
     }
 
     private void DrawMyGizmos() {

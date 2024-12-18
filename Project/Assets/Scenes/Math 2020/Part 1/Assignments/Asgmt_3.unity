@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &200078597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200078598}
+  m_Layer: 0
+  m_Name: CopyPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200078598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200078597}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.706, y: 0.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &893420076
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +268,7 @@ Transform:
   m_GameObject: {fileID: 1180694388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.59, y: 1.57, z: 0.07880313}
+  m_LocalPosition: {x: 1.996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301,7 +332,7 @@ Transform:
   m_GameObject: {fileID: 1759357457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -338,20 +369,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7786ee7e70253442be96a39833e5208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convertToLocalSpace: 0
+  convertToLocalSpace: 1
   convertToWorldSpace: 0
+  copyPoint: {fileID: 200078598}
   worldSpaceOrigin: {fileID: 1759357458}
   worldSpaceX: {fileID: 893420077}
   worldSpaceY: {fileID: 1358959658}
-  worldOrigin: {x: 0, y: 0.02}
-  worldY: {x: 0, y: 1.02}
-  worldX: {x: 1, y: 0.02}
+  worldOrigin: {x: 0, y: 0}
+  worldY: {x: 0, y: 1}
+  worldX: {x: 1, y: 0}
   localSpaceOrigin: {fileID: 1180694389}
   localSpaceX: {fileID: 1159003378}
   localSpaceY: {fileID: 1109708830}
-  localOrigin: {x: 2.59, y: 1.57}
-  localY: {x: 2.59, y: 2.5700002}
-  localX: {x: 3.59, y: 1.57}
+  localOrigin: {x: 1.996, y: 0}
+  localY: {x: 1.996, y: 1}
+  localX: {x: 2.996, y: 0}
 --- !u!4 &1842562981
 Transform:
   m_ObjectHideFlags: 0
@@ -360,17 +392,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842562979}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.009737772, w: 0.9999526}
+  m_LocalPosition: {x: 0.71, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.116}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 200078598}
   - {fileID: 1842562981}
   - {fileID: 1759357458}
   - {fileID: 1180694389}
