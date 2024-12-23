@@ -1,4 +1,7 @@
-using UnityEditor;
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
+
 using UnityEngine;
 
 /*
@@ -18,6 +21,7 @@ public class Asgmt_1_script : MonoBehaviour
     [Range(0f, 10f)]
     public float radius = 1f;
 
+    #if UNITY_EDITOR
     private void OnDrawGizmos() {
         Vector2 origin = this.transform.position;
         Vector2 obj_trs = obj.transform.position;
@@ -35,4 +39,5 @@ public class Asgmt_1_script : MonoBehaviour
 
         Handles.DrawWireDisc(origin, new Vector3(0, 0, 1), radius);
     }
+    #endif
 }

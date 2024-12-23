@@ -1,5 +1,4 @@
 using System.Net;
-using UnityEditor;
 using UnityEngine;
 
 /*
@@ -100,7 +99,5 @@ public class Asgmt_3_Script : MonoBehaviour {
 
         localY = localSpaceY.position;
         Gizmos.DrawLine(localOrigin, localY);
-    }
-
-
+    }   
 }
