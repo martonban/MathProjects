@@ -1,4 +1,6 @@
 # [WIP] Unity Math Course
+⚠️ WARNING! This repository is not yet finished. The descriptions and code found here are not complete. <br><br>
+
 This repository is a practice project based on [Freya Holmér's](https://www.youtube.com/@acegikmo) math tutorials. I have to improve in math so I use this courses for practice. Most of the time I implement everything on my own. <br>
 Unity Version: Unity 6000.0.28f
 
